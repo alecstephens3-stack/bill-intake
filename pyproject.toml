@@ -1,0 +1,17 @@
+[project]
+name = "bill-intake"
+version = "0.1.0"
+description = "Vendor bill intake: model reads, rules file, a person approves, QuickBooks Online enters."
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = []
+
+[project.optional-dependencies]
+bedrock = ["boto3"]
+quickbooks = ["requests"]
+pdf = ["pypdf"]
+test = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
